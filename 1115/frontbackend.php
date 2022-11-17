@@ -10,7 +10,7 @@
 
 <body>
   <div id="main">
-    <form action="http://web111b.com:6080/1115/backend.php" method="">
+    <form action="http://web111b.com:6080/1115/frontbackend.php" method="">
       使用者 : <input type="text" name="user"><br>
       <!--密&emsp;碼 : <input type="password" name="pws" size=12><br>-->
       &nbsp;&nbsp;email : <input type="email" name="email"><br>
@@ -41,15 +41,18 @@
 
 </html>
 
+
 <?php
-if (isset($_GET['user']) && isset($_GET['email']) && isset($_GET['edu']) && isset($_GET['hobby'])
-    && !empty($_GET['user']) && !empty($_GET['email']) && !empty($_GET['edu']) && !empty($_GET['hobby'])) {
+
+if (isset($_GET['user']) && isset($_GET['email']) && isset($_GET['edu']) && isset($_GET['hobbys'])
+    && !empty($_GET['user']) && !empty($_GET['email']) && !empty($_GET['edu']) && !empty($_GET['hobbys'])) {
     $user = $_GET["user"];
     $email = $_GET["email"];
     $edu = $_GET["edu"];
     $hobbys = $_GET["hobbys"];
 
-    $h = implode("、", $hobbys);
+    $h = implode(",", $hobbys) . "<br>";
 
-    echo "使用者:{$user} 他的emal:{$email} 學歷是 {$edu} 嗜好是{$h}";
+    echo "使用者:{$user} 他的emal:{$email} 學歷是 {$edu} 嗜好是 {$h}";
 }
+?>
