@@ -25,18 +25,20 @@ if (!empty($_GET['arg1']) && !empty($_GET['arg2']) && !empty($_GET['arg3'])) {
     $arg1 = $_GET["arg1"];
     $arg2 = $_GET["arg2"];
     $arg3 = $_GET["arg3"];
-    $temp = [];
+    $temp = array();
     for ($i = 0; $i < $arg3; $i++) {
 
         $num = rand($arg1, $arg2);
 
-            if (in_array($num, $temp)) {
-                array_push($temp, $num);
-                echo "幸運號碼為 $temp[$i] <br>";
+        if (in_array($num, $temp) == true) {
+            $i--;
 
-            } else {
-                $i--;
-            }
+        } else {
+
+            array_push($temp, $num);
+            echo "幸運號碼為 $temp[$i] <br>";
+
+        }
 
     }
 
