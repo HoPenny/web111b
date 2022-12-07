@@ -26,6 +26,7 @@ if (!empty($_GET['arg1']) && !empty($_GET['arg2']) && !empty($_GET['arg3'])) {
     $arg2 = $_GET["arg2"];
     $arg3 = $_GET["arg3"];
     $temp = array();
+
     for ($i = 0; $i < $arg3; $i++) {
         $num = rand($arg1, $arg2);
 
