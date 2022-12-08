@@ -27,9 +27,9 @@ if (!empty($_GET['arg1'])) {
         {
             $value = $arg1 % 2;
             if ($value == 1) {
-                echo '奇數<br>';
+                echo '是奇數<br>';
             } else {
-                echo '偶數<br>';
+                echo '是偶數<br>';
 
             }
 

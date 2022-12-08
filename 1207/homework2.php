@@ -29,7 +29,13 @@ if (!empty($_GET['arg1']) && !empty($_GET['arg2'])) {
             for ($i = 1; $i <= $c; $i++) {
                 $tmp = $i * $n;
                 for ($j = $i; $j <= $tmp; $j += $i) {
-                    echo " " . $j;
+                    if ($j > 9) {
+                        echo $j;
+                    } else {
+                        echo "  " . $j;
+
+                    }
+
                 }
                 echo "<br>";
 
