@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <script src="../js/jquery-3.6.2.js"></script> -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.js'></script>
+</head>
+
+<body>
+  <center>
+    <p><span>使用者</span><span><input type="text" name="username" disabled></span> </p>
+    <p><span>密碼</span><span><input type="text" name="password" disabled></span> </p>
+    <p> <button type="button">確認</button>
+    </p>
+
+    <script>
+      // console.log($("button"));
+      $("button").click(function () {
+        console.log("click")
+        $.ajax({
+          //請求
+          type: "post",
+          url: "http://web111b.com:6080/1216/http_post_response.php",
+          data: {
+            username: "web111b",
+            password: "1qaz@wsx"
+          },
+          dataType: "json",
+          success: function (data) {
+            console.log(data)
+            //msg=OK
+            if (data.msg == "OK") {
+              console.log("success")
+              alert("logon OK")
+            } else {
+              alert("logon Fail")
+            }
+          }
+
+        }
+
+
+
+
+        );
+      });
+    </script>
+
+
+
+
+  </center>
+</body>
+
+</html>
