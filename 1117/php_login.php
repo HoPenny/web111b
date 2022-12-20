@@ -68,8 +68,7 @@ if (!empty($_POST['uname']) || !empty($_POST['upass'])) {
             echo "您有新留言 </div>";
             echo "<script>document.getElementById('login_form').style.display = 'none'</script> <br>";
             echo "<button type='button' class='btn' id='btn1' οnclick='fun(this)'  value='btn1'>回首頁</button>";
-        }
-         else {
+        } else {
             echo "<div class='error'>帳號密碼有誤</div>";
 
         }

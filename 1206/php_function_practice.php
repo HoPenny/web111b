@@ -10,14 +10,20 @@
 
 <body>
   <form action="function.php" method="get">
-    今天<select name="meals" default=null>
+    今天
+    <!-- <input type="text" name="meals"> -->
+    <select name="meals">
+      <option value="">請選擇</option>
       <option value="早餐">早餐</option>
       <option value="午餐">午餐</option>
       <option value="下午茶">下午茶</option>
       <option value="晚餐">晚餐</option>
       <option value="消夜">消夜</option>
     </select><br>
-    吃<select name="eat">
+    吃
+    <!-- <input type="text" name="eat"> -->
+    <select name="eat">
+      <option value="">請選擇</option>
       <option value="漢堡">漢堡</option>
       <option value="義大利麵">義大利麵</option>
       <option value="牛肉麵">牛肉麵</option>
