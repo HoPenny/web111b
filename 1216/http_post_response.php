@@ -1,8 +1,8 @@
 <?php
-//不同網域 CROS從後端做
+//不同網域 CROSS從後端做
 header('Access-Control-Allow-Origin: http://localhost:6080');
-//只允許 http://localhost:6080 CROS
-// header('Access-Control-Allow-Origin: *');  // 允許 任何網站 CROS
+//只允許 http://localhost:6080 CROSS
+// header('Access-Control-Allow-Origin: *');  // 允許 任何網站 CROSS
 // header('Access-Control-Allow-Credentials:true');  //cookie
 
 $uname = $_POST["username"];
