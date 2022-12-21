@@ -8,4 +8,9 @@
 }
 .alink {
     display: inline;
+    color: rgb(34, 48, 95);
+}
+.myline {
+    background-color: #e3f2fd;
+    display: block;
 }
