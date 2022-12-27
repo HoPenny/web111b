@@ -7,6 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>學生資料管理系統</title>
 </head>
+<?php
+require_once "connDB.php";
+$cid = $_GET['cID'];
+
+$sql = "SELECT * FROM  `students` WHERE `cID` = $cid";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result);
+
+?>
 
 <body>
   <h1 align='center'>學生資料管理系統 - 修改資料 </h1>
@@ -19,37 +28,46 @@
       </tr>
       <tr>
         <td>姓名</td>
-        <td><input type="text" name="cName" required></td>
+        <td><input type="text" name="cName" value="<?=$row['cName'];?>"></td>
       </tr>
       <tr>
         <td>性別</td>
-        <td><input type="radio" name="cSex" value='M' checked>男
+        <td>
+          <?php
+            if($row['cSex']="F"){
+          ?>
+          <input type="radio" name="cSex" value='M'>男
+          <input type="radio" name="cSex" value='F' checked>女
+          <?php
+            }else {?>
+          <input type="radio" name="cSex" value='M' checked>男
           <input type="radio" name="cSex" value='F'>女
+          <?php }  ?>
         </td>
       </tr>
       <tr>
         <td>生日</td>
-        <td><input type="date" name="cBirthday" required></td>
+        <td><input type="date" name="cBirthday" value="<?=$row['cBirthday'];?>"></td>
       </tr>
       <tr>
         <td>Email</td>
-        <td><input type="email" name="cEmail" required></td>
+        <td><input type="email" name="cEmail" value="<?=$row['cEmail'];?>"></td>
       </tr>
       <tr>
         <td>電話</td>
-        <td><input type="tel" name="cPhone" required></td>
+        <td><input type="tel" name="cPhone" value="<?=$row['cPhone'];?>"></td>
       </tr>
       <tr>
         <td>住址</td>
-        <td><input type="text" name="cAddr" size="50" required></td>
+        <td><input type="text" name="cAddr" size="50" value="<?=$row['cAddr'];?>"></td>
       </tr>
       <tr>
         <td>身高</td>
-        <td><input type="number" name="cHeight" size="10" required></td>
+        <td><input type="number" name="cHeight" size="10" value="<?=$row['cHeight'];?>"></td>
       </tr>
       <tr>
         <td>體重</td>
-        <td><input type="number" name="cWeight" size="10" required></td>
+        <td><input type="number" name="cWeight" size="10" value="<?=$row['cWeight'];?>"></td>
       </tr>
       <tr>
         <td colspan=2 align="center">
