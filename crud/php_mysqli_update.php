@@ -10,7 +10,7 @@
 <?php
 require_once "connDB.php";
 $cid = $_GET['cID'];
-
+// echo $cid;
 $sql = "SELECT * FROM  `students` WHERE `cID` = $cid";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
@@ -26,54 +26,56 @@ $row = mysqli_fetch_assoc($result);
         <th>欄位</th>
         <th>資料</th>
       </tr>
+      <input type="hidden" name="cID" value="<?=$row['cID'];?>">
       <tr>
         <td>姓名</td>
-        <td><input type="text" name="cName" value="<?=$row['cName'];?>"></td>
+        <td><input type="text" name="cName" value="<?=$row['cName'];?>" required></td>
       </tr>
       <tr>
         <td>性別</td>
         <td>
-          <?php
-            if($row['cSex']="F"){
-          ?>
-          <input type="radio" name="cSex" value='M'>男
-          <input type="radio" name="cSex" value='F' checked>女
-          <?php
-            }else {?>
-          <input type="radio" name="cSex" value='M' checked>男
-          <input type="radio" name="cSex" value='F'>女
-          <?php }  ?>
+          <input type="radio" name="cSex" value='M' <?php if ($row['cSex'] == 'M') {
+    echo " checked";
+}
+
+?>>男
+          <input type="radio" name="cSex" value='F' <?php if ($row['cSex'] == 'F') {
+    echo " checked";
+}
+
+?>>女
+
         </td>
       </tr>
       <tr>
         <td>生日</td>
-        <td><input type="date" name="cBirthday" value="<?=$row['cBirthday'];?>"></td>
+        <td><input type="date" name="cBirthday" value="<?=$row['cBirthday'];?>" required></td>
       </tr>
       <tr>
         <td>Email</td>
-        <td><input type="email" name="cEmail" value="<?=$row['cEmail'];?>"></td>
+        <td><input type="email" name="cEmail" value="<?=$row['cEmail'];?>" required></td>
       </tr>
       <tr>
         <td>電話</td>
-        <td><input type="tel" name="cPhone" value="<?=$row['cPhone'];?>"></td>
+        <td><input type="tel" name="cPhone" value="<?=$row['cPhone'];?>" required></td>
       </tr>
       <tr>
         <td>住址</td>
-        <td><input type="text" name="cAddr" size="50" value="<?=$row['cAddr'];?>"></td>
+        <td><input type="text" name="cAddr" size="50" value="<?=$row['cAddr'];?>" required></td>
       </tr>
       <tr>
         <td>身高</td>
-        <td><input type="number" name="cHeight" size="10" value="<?=$row['cHeight'];?>"></td>
+        <td><input type="number" name="cHeight" size="10" value="<?=$row['cHeight'];?>" required></td>
       </tr>
       <tr>
         <td>體重</td>
-        <td><input type="number" name="cWeight" size="10" value="<?=$row['cWeight'];?>"></td>
+        <td><input type="number" name="cWeight" size="10" value="<?=$row['cWeight'];?>" required></td>
       </tr>
       <tr>
         <td colspan=2 align="center">
           <input type="hidden" name="action" value="update">
           <input type="submit" name="button" value="修改資料">
-          <!-- <input type="reset" name="button" value="重新填寫"> -->
+          <input type="reset" name="button" value="取消">
         </td>
       </tr>
 
@@ -84,15 +86,18 @@ $row = mysqli_fetch_assoc($result);
 
 </html>
 <?php
-// if (isset($_POST['action']) && $_POST['action'] == "update") {
-//     require_once "connDB.php";
-//     $sql_query = "UPDATE `students` ";
-//     $sql_query .= "SET `cID`='[$_POST[']',`cName`='[value-2]',`cSex`='[value-3]',";
-//     $sql_query .= "`cBirthday`='[value-4]',`cEmail`='[value-5]',`cPhone`='[value-6]',";
-//     $sql_query .= "`cAddr`='[value-7]',`cHeight`='[value-8]',`cWeight`='[value-9]' WHERE `cID`= )";
-//     // echo $sql_query;
-//     // exit;
-//     mysqli_query($conn, $sql_query);
-//     mysqli_close($conn);
+if (isset($_POST['action']) && $_POST['action'] == "update") {
+    require_once "connDB.php";
+    $sql_query = "UPDATE `students` SET `cID`='" . $_POST['cID'] . "',";
+    $sql_query .= "`cName`='" . $_POST['cName'] . "',`cSex`='" . $_POST['cSex'] . "',";
+    $sql_query .= "`cBirthday`='" . $_POST['cBirthday'] . "',`cEmail`='" . $_POST['cEmail'] . "',";
+    $sql_query .= "`cPhone`='" . $_POST['cPhone'] . "',";
+    $sql_query .= "`cAddr`='" . $_POST['cAddr'] . "',`cHeight`='" . $_POST['cHeight'] . "',";
+    $sql_query .= "`cWeight`='" . $_POST['cWeight'] . "' WHERE `cID`= '" . $_POST['cID'] . "' ";
+    // echo $sql_query;
+    // exit;
+    mysqli_query($conn, $sql_query);
+    mysqli_close($conn);
+    header('Location: php_mysqli_read.php');
 
-// }
+}
