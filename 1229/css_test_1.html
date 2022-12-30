@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="google font" href="https://fonts.google.com/">
+  <title>Document</title>
+  <style>
+    @font-face {
+      font-family: MyFont;
+      src: url("fonts/RubikBubbles-Regular.ttf");
+    }
+
+    title {
+      color: hsla(120, 100%, 50%, 0.5)
+    }
+
+    p {
+      /* color: #FF0000 */
+      /* color: #0FF */
+      /* color: rgb(255, 255, 0) */
+      /* color: rgb(100%, 80%, 60%) */
+      color: rgba(20%, 40%, 60%, .6);
+      /* color: hsla(120, 100%, 50%, 0.5) */
+      font-family: MyFont;
+      /* "Griffy", Helvetica, sans-serif; */
+    }
+
+    a {
+      text-decoration: underline;
+    }
+
+    h1 {
+      font-family: Arial, "微軟正黑體", "標楷體";
+      font-weight: 800;
+    }
+
+    div {
+      width: 220px;
+      height: 50px;
+      float: left;
+      margin-right: 10px;
+      line-height: 50px;
+      text-align: justify;
+      border: 1px solid #000;
+    }
+
+    .hsl1 {
+      color: hsl(0, 100%, 100%);
+      background-color: hsl(0, 100%, 50%);
+    }
+
+    .hsl2 {
+      color: hsl(0, 100%, 100%);
+      background-color: hsl(240, 50%, 50%);
+    }
+
+    .hsl3 {
+      background-color: hsl(30, 100%, 50%);
+    }
+
+    .hsla1 {
+      color: hsl(0, 100%, 100%);
+      background-color: hsla(0, 100%, 0%, 0.8);
+    }
+
+    .hsla2 {
+      background-color: hsla(210, 100%, 50%, 0.8);
+    }
+
+
+    body {
+      /*字元字距*/
+      /* letter-spacing: 5px */
+      /*單字字距*/
+      word-spacing: 20px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h1>標題</h1>
+  <p>Lorem ipsum dolor sit amet consecertur adipisicing elit. Ducimus quam sed repellat amet deletctus mesciun inventire
+    doloremque consectetitetur
+    dolor libery?
+  </p>
+  <a href="">LINK</a>
+  <div class="hsl1">hsl(0, 50%, 50%)</div>
+  <div class="hsl2">hsl(240, 80%, 50%)</div>
+  <div class="hsl3">hsl(30, 100%, 50%)</div>
+  <div class="hsla1">hsla(0, 100%, 0%, 0.8)</div>
+  <div class="hsla2">hsla(210, 100%, 50%, 0.8)</div>
+  <div id="log">log</div>
+</body>
+
+</html>

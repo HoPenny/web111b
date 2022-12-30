@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let username = new Array(5);
+    username[0] = "Joe";
+    username[1] = "May";
+    username[2] = "Jhon";
+    username[3] = "Julla";
+    username[4] = "Peter";
+    let username1 = new Array("Joe", "May", "Jhon", "Julla", "Peter");
+    let username2 = ["Joe", "May", "Jhon", "Julla", "Peter"];
+    username2
+    for (let index = 0; index < username2.length; index++) {
+      window.alert(username2[index] + ' '); //在訊息方塊顯示
+      document.write(username2[index] + "<br>");//在網頁畫面顯示
+      console.log(username2[index] + ' ');//在googleDev顯示
+
+      username1
+    }
+    username1.forEach(function (data) {
+      console.log(data);
+    });
+
+    username
+    for (var idnex in username) {
+      console.log(username[idnex]);
+    }
+  </script>
+</body>
+
+</html>
