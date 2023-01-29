@@ -16,9 +16,10 @@
     username[2] = "Jhon";
     username[3] = "Julla";
     username[4] = "Peter";
-    let username1 = new Array("Joe", "May", "Jhon", "Julla", "Peter");
-    let username2 = ["Joe", "May", "Jhon", "Julla", "Peter"];
+    let username1 = new Array("Joe1", "May1", "Jhon1", "Julla1", "Peter1");
+    let username2 = ["Joe2", "May2", "Jhon2", "Julla2", "Peter2"];
     username2
+
     for (let index = 0; index < username2.length; index++) {
       window.alert(username2[index] + ' '); //在訊息方塊顯示
       document.write(username2[index] + "<br>");//在網頁畫面顯示
@@ -26,13 +27,14 @@
 
       username1
     }
+    //在Dev的console可查看
     username1.forEach(function (data) {
       console.log(data);
     });
-
+    //在Dev的console可查看
     username
-    for (var idnex in username) {
-      console.log(username[idnex]);
+    for (var index in username) {
+      console.log(username[index]);
     }
   </script>
 </body>
