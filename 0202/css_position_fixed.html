@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*絕對定位*/
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: #333;
+      opacity: 0.3;
+      right: 200px;
+      bottom: 200px;
+      position: absolute;
+    }
+
+    /* 相對定位 */
+    .container {
+      width: 600px;
+      height: 400px;
+      background-color: purple;
+      opacity: 0.3;
+      position: relative;
+    }
+
+    /* 固定定位 */
+    .fixed-box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      position: fixed;
+      left: 300;
+      top: 600px
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box">Hello</div>
+  </div>
+  <div class="fixed-box"></div>
+</body>
+
+</html>
