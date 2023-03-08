@@ -1,0 +1,302 @@
+/* global start*/
+:root {
+    --primaryColor: #ff6a48;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+img {
+    width: 100%;
+}
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+li {
+    float: left;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5em;
+    font-weight: 300px;
+    letter-spacing: 1px;
+}
+/* Global end*/
+/* GRID FOR DESKTOP */
+* {
+    box-sizing: border-box;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.fixed-width {
+    width: 1200px;
+    margin: auto;
+}
+
+.col-1 {
+    width: calc(100% * 1 / 12);
+}
+
+.col-2 {
+    width: calc(100% * 2 / 12);
+}
+
+.col-3 {
+    width: calc(100% * 3 / 12);
+}
+
+.col-4 {
+    width: calc(100% * 4 / 12);
+}
+
+.col-5 {
+    width: calc(100% * 5 / 12);
+}
+
+.col-6 {
+    width: calc(100% * 6 / 12);
+}
+
+.col-7 {
+    width: calc(100% * 7 / 12);
+}
+
+.col-8 {
+    width: calc(100% * 8 / 12);
+}
+
+.col-9 {
+    width: calc(100% * 9 / 12);
+}
+
+.col-10 {
+    width: calc(100% * 10 / 12);
+}
+
+.col-11 {
+    width: calc(100% * 11 / 12);
+}
+
+.col-12 {
+    width: calc(100%);
+}
+.nopa {
+    padding: 0 !important;
+    /* 優先層級提高,不受下方屬性影響 */
+    /* 否則要擺放到有相同padding設定的屬性下面位置 */
+}
+[class*='col'] {
+    float: left;
+    padding: 10px;
+}
+/* .nopa {
+    margin-left: -10px;
+    margin-right: -10px;
+} */
+/* .nopa {
+    padding: 0 !important;
+
+} */
+.noma {
+    margin-left: -10;
+    margin-right: -10px;
+}
+.btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: var(--primaryColor);
+    color: #fff;
+    text-decoration: none;
+}
+.btn1 {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: var(--primaryColor);
+    color: #fff;
+    border: 3px solid rgba(249, 198, 180);
+    text-decoration: none;
+}
+/* nav-info */
+#nav-info {
+    /* height: 50px; */
+    /* line-height: 50px; */
+    /* background-color: #ccc; */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* position: fixed; */
+    position: absolute;
+    /* background-color: rgba(255, 255, 255, 0.75); */
+}
+#nav-info a {
+    color: #fff;
+    /* text-decoration: none;
+    color: black; */
+    /* padding-left: 15px;
+    padding-right: 15px; */
+    display: block;
+    padding: 8px 15px;
+}
+#nav-info .addr {
+    float: left;
+    /* line-height: 50px; */
+    padding: 8px 15px;
+}
+#nav-info .register {
+    float: right;
+    /* line-height: 50px; */
+    padding: 8px 15px;
+}
+#nav-info .donate {
+    float: right;
+    padding: 8px 15px;
+}
+
+/* #nav-info .addr li {
+    float: left;
+    list-style: none;
+}
+#nav-info .register li {
+    float: left;
+    list-style: none;
+} */
+/* nav */
+
+nav {
+    position: absolute;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    top: 74px;
+    /* background-color: rgba(255, 255, 255, 0.75); */
+}
+nav .logo {
+    float: left;
+    font-size: x-large;
+}
+nav a {
+    color: #fff;
+    display: block;
+    padding: 8px 15px;
+}
+nav .menu {
+    float: right;
+}
+nav .menu li {
+    float: left;
+}
+header {
+    height: 500px;
+
+    background-image: linear-gradient(rgba(65, 35, 15, 0.507), rgba(36, 38, 39, 0.507)), url(/web111b/imgs/header.jfif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/* feature */
+#feature {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#feature div {
+    /* height: 100px; */
+}
+#feature .col-7 {
+    /* background-color: #fa0; */
+}
+#feature .col-5 {
+    /* background-color: #aa0; */
+}
+#feature .col-2 {
+    /* background-color: rgb(87, 193, 241); */
+}
+#feature .col-12 {
+    /* background-color: #a0f; */
+}
+#feature .col-10 {
+    /* background-color: #f00; */
+}
+#feature h2 {
+    font-size: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#feature h3 {
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 1em;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+#feature p {
+    padding-top: 13px;
+    padding-bottom: 15px;
+}
+/* #feature .col-5 {
+    padding: 40px 60px;
+} */
+.feature-gallery {
+    padding: 40px 60px;
+}
+.line {
+    position: relative;
+    /* 相對定位 */
+}
+.line::before {
+    content: '';
+    display: block;
+    position: absolute;
+    border-top: 3px solid var(--primaryColor);
+    width: 60px;
+    top: 22px;
+    left: 20px;
+}
+.line-light::before {
+    content: '';
+    display: block;
+    position: absolute;
+    border-top: 3px solid #fff;
+    width: 60px;
+    top: 22px;
+    left: 1px;
+}
+#events {
+    /* padding-top: 10px; */
+    padding-bottom: 100px;
+    background-image: linear-gradient(rgba(255, 96, 96, 0.6), rgba(255, 96, 96, 0.6)), url(https://source.unsplash.com/random/1600x800);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+#events p {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    color: #fff;
+}
+#events h2 {
+    color: #fff;
+}
