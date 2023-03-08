@@ -1,6 +1,7 @@
 /* global start  */
 :root {
     --primaryColor: #ff6a48;
+    --secondColor: #fff;
 }
 
 html,
@@ -120,6 +121,7 @@ p {
 [class*='col'] {
     float: left;
     padding: 10px;
+    border: 1px solid rgb(177, 140, 232);
 }
 
 /* div {
@@ -291,21 +293,48 @@ header {
     top: 22px;
     left: 1px;
 }
-
-.line-light::before {
+.line1 {
+    position: relative;
+}
+.line1:before {
     content: '';
     display: block;
 
     position: absolute;
-    border-top: 3px solid #fff;
+    border-top: 3px solid var(--secondColor);
     width: 60px;
     top: 22px;
     left: 1px;
 }
+.line2 {
+    position: relative;
+}
+.line2:before {
+    content: '';
+    display: block;
 
+    position: absolute;
+    border-top: 3px solid var(--secondColor);
+    width: 60px;
+    top: 20px;
+    left: 1px;
+}
+.line3 {
+    position: relative;
+}
+.line3:before {
+    content: '';
+    display: block;
+
+    position: absolute;
+    border-top: 3px solid var(--secondColor);
+    width: 60px;
+    top: 90px;
+    left: 1px;
+}
 /* events  */
 #events {
-    padding-top: 50px;
+    padding-top: 500px;
     padding-bottom: 50px;
 
     background-image: linear-gradient(rgba(255, 96, 96, 0.6), rgba(255, 96, 96, 0.6)), url(https://source.unsplash.com/random/1200x300);
@@ -332,7 +361,11 @@ header {
     padding-top: 50px;
     padding-bottom: 50px;
 }
-
+#gallery h2 {
+    font-size: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
 #gallery .col-4 {
     height: 600px;
     width: 400px;
@@ -366,7 +399,7 @@ footer .col-4 a:hover {
 }
 
 #additional {
-    height: 150px;
+    height: 200px;
     line-height: 150px;
     background-image: linear-gradient(rgba(255, 96, 96, 0.6), rgba(255, 96, 96, 0.6)), url(https://source.unsplash.com/random/1200x300);
     background-repeat: no-repeat;
@@ -374,24 +407,251 @@ footer .col-4 a:hover {
     background-attachment: fixed;
     background-position: center;
     color: #fff;
-    padding: 0 100px;
+    /* padding: 0 100px; */
+    display: flex;
 }
-
-#additional .col-5 .btn2 {
+.flex-container {
+    width: 1360px;
+    margin: 0 auto;
+}
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    -webkit-flex: 1;
+    flex-direction: row;
+}
+#additional .addr {
+    height: 150px;
+    float: left;
+    padding: 50px 15px;
+    line-height: 20px;
+}
+#additional .col-2 {
+    height: 80px;
+}
+.date1 {
     margin-top: 50px;
     line-height: 50px;
-    padding: 0 0;
+    background-color: #ff6a48;
+    padding: 15px 0;
     text-align: center;
-    height: 50px;
-    float: right;
-    border: 3px solid rgb(211, 202, 202);
+    height: 40px;
+    width: 80px;
+    float: left;
+    color: #fff;
+}
+#additional h1 {
+    line-height: 5px;
+    font-size: 38px;
+    margin: 0;
+    padding: 10px 0px;
+}
+#additional h4 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0 0;
+}
+.text1 {
+    display: flex;
+    flex-direction: column;
+    /* margin: 0;
+    padding: 0 0; */
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.clock {
+    margin: 0;
+    padding: 0 0;
+    height: 0px;
+}
+.time {
+    margin: 0;
+    /* display: inline; */
+    padding-top: 0px;
+    /* background-color: #e9e9e9; */
+    color: #aaa;
+    height: 20px;
+}
+.word {
+    /* display: inline; */
+    font-size: x-large;
+    margin: 0;
+    padding-top: 0px;
+    /* background-color: #613c3c; */
+    height: 150px;
+}
+#additional .col-7 {
+    flex: auto;
+    /* background-color: #a982e3; */
+}
+#additional .col-5 {
+    padding: 1em;
+    /* background: #d97018; */
+    flex: auto;
+}
+
+#additional .btn3 {
+    margin-top: 45px;
+    line-height: 50px;
+    padding: 10px 60px 30px 60px;
+    text-align: left;
+    height: 80px;
+    float: left;
+    border: 3px solid rgb(165, 162, 162);
     color: #fff;
 }
 #additional .col-6 a {
     color: #fff;
     font-size: smaller;
 }
+
+/* #additional .col-7 .btn2 {
+    margin-top: 40px;
+    line-height: 35px;
+    background-color: #ff6a48;
+    padding: 15px 0;
+    text-align: center;
+    height: 80px;
+    width: 80px;
+    float: right;
+
+    color: #fff;
+} */
+
+#additional .col-1 {
+    border-bottom: none;
+    border-right: solid 1px #e9e9e9;
+    margin: 40px 0;
+    padding: 40px 0;
+}
 #upcoming {
+    height: 800px;
+    line-height: 150px;
+    background-image: linear-gradient(rgba(233, 189, 108, 0.6), rgba(255, 96, 96, 0.6)), url(https://source.unsplash.com/random/1200x300);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #fff;
+    padding: 0 10px;
+}
+#upcoming h2 {
+    line-height: 15px;
+    font-size: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#upcoming h3 {
+    line-height: 15px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    font-size: 20px;
+}
+
+#upcoming h1 {
+    line-height: 5px;
+    font-size: 38px;
+    margin: 0;
+    padding: 10px 0px;
+}
+#upcoming h4 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0 0;
+}
+
+.date {
+    float: left;
+    margin-top: 10px;
+    line-height: 35px;
+    background-color: #ff6a48;
+    padding: 15px 0;
+    text-align: center;
+    height: 80px;
+    width: 80px;
+    color: #fff;
+}
+.clock1 {
+    line-height: 15px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    font-size: 20px;
+}
+.addr1 {
+    line-height: 15px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    font-size: 20px;
+}
+#blog {
+    height: 700px;
     padding-top: 50px;
     padding-bottom: 50px;
+}
+.imgbox {
+    position: relative;
+}
+#blog img {
+    margin: 0;
+    padding: 0 0;
+}
+#blog .date {
+    /* margin: 0; */
+    padding: 0 0;
+    width: 80px;
+    text-align: center;
+    background-color: #ff6a48;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+}
+#blog .col-4 {
+    height: 400px;
+    width: 400px;
+}
+#blog h1 {
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+#blog h4 {
+    padding-top: 0px;
+    padding-bottom: 15px;
+}
+
+#pastor {
+    height: 800px;
+    line-height: 150px;
+    background-image: linear-gradient(rgba(233, 189, 108, 0.6), rgba(255, 96, 96, 0.6)), url(https://source.unsplash.com/random/1200x300);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #fff;
+    padding: 0 10px;
+}
+#pastor h2 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#pastor .col-8 .col-2 .btn2 {
+    margin: 50px 0px;
+    background-color: #ff6a48;
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    float: left;
+    color: #fff;
+    line-height: 50px;
+}
+#pastor p {
+    color: #fff;
+}
+#pastor a {
+    border: 3px solid rgb(167, 164, 164);
+    padding: 15px 15px;
+}
+#pastor h4 {
+    padding-top: 0px;
 }

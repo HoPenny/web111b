@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* xs*/
+    @media screen and (max-width:576px) {
+      body {
+        background-color: rgb(238, 142, 98);
+      }
+
+      .fixed-width {
+        width: 576;
+        margin: auto;
+      }
+
+      .col-1 {
+        width: calc(100% * 1 / 12);
+      }
+
+      .col-2 {
+        width: calc(100% * 2 / 12);
+      }
+
+      .col-3 {
+        width: calc(100% * 3 / 12);
+      }
+
+      .col-4 {
+        width: calc(100% * 4 / 12);
+      }
+
+      .col-5 {
+        width: calc(100% * 5 / 12);
+      }
+
+      .col-6 {
+        width: calc(100% * 6 / 12);
+      }
+
+      .col-7 {
+        width: calc(100% * 7 / 12);
+      }
+
+      .col-8 {
+        width: calc(100% * 8 / 12);
+      }
+
+      .col-9 {
+        width: calc(100% * 9 / 12);
+      }
+
+      .col-10 {
+        width: calc(100% * 10 / 12);
+      }
+
+      .col-11 {
+        width: calc(100% * 11 / 12);
+      }
+
+      .col-12 {
+        width: calc(100% * 12 / 12);
+      }
+
+    }
+
+    /* sm*/
+    @media screen and (min-width:576px) {
+      body {
+        background-color: rgb(245, 136, 214);
+      }
+
+      .fixed-width {
+        width: 576;
+        margin: auto;
+      }
+
+      .col-sm-1 {
+        width: calc(100% * 1 / 12);
+      }
+
+      .col-sm-2 {
+        width: calc(100% * 2 / 12);
+      }
+
+      .col-sm-3 {
+        width: calc(100% * 3 / 12);
+      }
+
+      .col-sm-4 {
+        width: calc(100% * 4 / 12);
+      }
+
+      .col-sm-5 {
+        width: calc(100% * 5 / 12);
+      }
+
+      .col-sm-6 {
+        width: calc(100% * 6 / 12);
+      }
+
+      .col-sm-7 {
+        width: calc(100% * 7 / 12);
+      }
+
+      .col-sm-8 {
+        width: calc(100% * 8 / 12);
+      }
+
+      .col-sm-9 {
+        width: calc(100% * 9 / 12);
+      }
+
+      .col-sm-10 {
+        width: calc(100% * 10 / 12);
+      }
+
+      .col-sm-11 {
+        width: calc(100% * 11 / 12);
+      }
+
+      .col-sm-12 {
+        width: calc(100% * 12 / 12);
+      }
+
+    }
+
+    /* 平板 */
+    @media screen and (min-width:768px) {
+      body {
+        background-color: rgb(134, 148, 235);
+      }
+
+      .fixed-width {
+        width: 768px;
+        margin: auto;
+      }
+
+      .col-md-1 {
+        width: calc(100% * 1 / 12);
+      }
+
+      .col-md-2 {
+        width: calc(100% * 2 / 12);
+      }
+
+      .col-md-3 {
+        width: calc(100% * 3 / 12);
+      }
+
+      .col-md-4 {
+        width: calc(100% * 4 / 12);
+      }
+
+      .col-md-5 {
+        width: calc(100% * 5 / 12);
+      }
+
+      .col-md-6 {
+        width: calc(100% * 6 / 12);
+      }
+
+      .col-md-7 {
+        width: calc(100% * 7 / 12);
+      }
+
+      .col-md-8 {
+        width: calc(100% * 8 / 12);
+      }
+
+      .col-md-9 {
+        width: calc(100% * 9 / 12);
+      }
+
+      .col-md-10 {
+        width: calc(100% * 10 / 12);
+      }
+
+      .col-md-11 {
+        width: calc(100% * 11 / 12);
+      }
+
+      .col-md-12 {
+        width: calc(100% * 12 / 12);
+      }
+    }
+
+    /* lg */
+    @media screen and (min-width:992px) {
+      body {
+        background-color: rgb(120, 216, 243);
+      }
+
+      .fixed-width {
+        width: 992px;
+        margin: auto;
+      }
+
+      .col-lg-1 {
+        width: calc(100% * 1 / 12);
+      }
+
+      .col-lg-2 {
+        width: calc(100% * 2 / 12);
+      }
+
+      .col-lg-3 {
+        width: calc(100% * 3 / 12);
+      }
+
+      .col-lg-4 {
+        width: calc(100% * 4 / 12);
+      }
+
+      .col-lg-5 {
+        width: calc(100% * 5 / 12);
+      }
+
+      .col-lg-6 {
+        width: calc(100% * 6 / 12);
+      }
+
+      .col-lg-7 {
+        width: calc(100% * 7 / 12);
+      }
+
+      .col-lg-8 {
+        width: calc(100% * 8 / 12);
+      }
+
+      .col-lg-9 {
+        width: calc(100% * 9 / 12);
+      }
+
+      .col-lg-10 {
+        width: calc(100% * 10 / 12);
+      }
+
+      .col-lg-11 {
+        width: calc(100% * 11 / 12);
+      }
+
+      .col-lg-12 {
+        width: calc(100% * 12 / 12);
+      }
+    }
+
+    /* 桌機 */
+    @media screen and (min-width:1200px) {
+      body {
+        background-color: rgb(251, 212, 151);
+      }
+
+      .fixed-width {
+        width: 1200px;
+        margin: auto;
+      }
+
+      .col-xl-1 {
+        width: calc(100% * 1 / 12);
+      }
+
+      .col-xl-2 {
+        width: calc(100% * 2 / 12);
+      }
+
+      .col-xl-3 {
+        width: calc(100% * 3 / 12);
+      }
+
+      .col-xl-4 {
+        width: calc(100% * 4 / 12);
+      }
+
+      .col-xl-5 {
+        width: calc(100% * 5 / 12);
+      }
+
+      .col-xl-6 {
+        width: calc(100% * 6 / 12);
+      }
+
+      .col-xl-7 {
+        width: calc(100% * 7 / 12);
+      }
+
+      .col-xl-8 {
+        width: calc(100% * 8 / 12);
+      }
+
+      .col-xl-9 {
+        width: calc(100% * 9 / 12);
+      }
+
+      .col-xl-10 {
+        width: calc(100% * 10 / 12);
+      }
+
+      .col-xl-11 {
+        width: calc(100% * 11 / 12);
+      }
+
+      .col-xl-12 {
+        width: calc(100% * 12 / 12);
+      }
+
+    }
+
+    /* xxl */
+    @media screen and (min-width:1400px) {
+      body {
+        background-color: rgb(114, 220, 161);
+      }
+
+      .fixed-width {
+        width: 1400px;
+        margin: auto;
+      }
+
+      .col-xxl-1 {
+        width: calc(100% * 1 / 12);
+      }
+
+      .col-xxl-2 {
+        width: calc(100% * 2 / 12);
+      }
+
+      .col-xxl-3 {
+        width: calc(100% * 3 / 12);
+      }
+
+      .col-xxl-4 {
+        width: calc(100% * 4 / 12);
+      }
+
+      .col-xxl-5 {
+        width: calc(100% * 5 / 12);
+      }
+
+      .col-xxl-6 {
+        width: calc(100% * 6 / 12);
+      }
+
+      .col-xxl-7 {
+        width: calc(100% * 7 / 12);
+      }
+
+      .col-xxl-8 {
+        width: calc(100% * 8 / 12);
+      }
+
+      .col-xxl-9 {
+        width: calc(100% * 9 / 12);
+      }
+
+      .col-xxl-10 {
+        width: calc(100% * 10 / 12);
+      }
+
+      .col-xxl-11 {
+        width: calc(100% * 11 / 12);
+      }
+
+      .col-xxl-12 {
+        width: calc(100% * 12 / 12);
+      }
+
+    }
+
+    /* 共用區 */
+    * {
+      box-sizing: border-box;
+    }
+
+    .full-width {
+      width: 100%;
+    }
+
+    [class*='col'] {
+      float: left;
+      padding: 15px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="full-width">
+    <div class="fixed-width">
+      <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-6">
+        <H2>TITLE</H2>
+        <p>
+          不要下載地址痛苦貨幣對手搜尋引擎一看熱點不去，幫忙禮品回家有很多奇蹟毫無讓你理解很難說完文本召開，全體理想紀念能力可是機場教授施工動力國語漫畫手指，利潤這麼貸款簡介用來植物聯想斑竹加入時間看過點頭，幽默連續把握辦公不少缺乏玻璃可是目的犯罪隨便非常，夫妻還。
+        </p>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-6">
+        <H2>TITLE</H2>
+        <p>
+          不要下載地址痛苦貨幣對手搜尋引擎一看熱點不去，幫忙禮品回家有很多奇蹟毫無讓你理解很難說完文本召開，全體理想紀念能力可是機場教授施工動力國語漫畫手指，利潤這麼貸款簡介用來植物聯想斑竹加入時間看過點頭，幽默連續把握辦公不少缺乏玻璃可是目的犯罪隨便非常，夫妻還。
+        </p>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-6">
+        <H2>TITLE</H2>
+        <p>
+          不要下載地址痛苦貨幣對手搜尋引擎一看熱點不去，幫忙禮品回家有很多奇蹟毫無讓你理解很難說完文本召開，全體理想紀念能力可是機場教授施工動力國語漫畫手指，利潤這麼貸款簡介用來植物聯想斑竹加入時間看過點頭，幽默連續把握辦公不少缺乏玻璃可是目的犯罪隨便非常，夫妻還。
+        </p>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-6">
+        <H2>TITLE</H2>
+        <p>
+          不要下載地址痛苦貨幣對手搜尋引擎一看熱點不去，幫忙禮品回家有很多奇蹟毫無讓你理解很難說完文本召開，全體理想紀念能力可是機場教授施工動力國語漫畫手指，利潤這麼貸款簡介用來植物聯想斑竹加入時間看過點頭，幽默連續把握辦公不少缺乏玻璃可是目的犯罪隨便非常，夫妻還。
+        </p>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
