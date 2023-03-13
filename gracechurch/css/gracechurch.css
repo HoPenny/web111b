@@ -3,7 +3,9 @@
     --primaryColor: #ff6a48;
     --secondColor: #fff;
 }
-
+body {
+    font-family: 微軟正黑體, Arial, Helvetica, sans-serif;
+}
 html,
 body,
 h1,
@@ -121,7 +123,7 @@ p {
 [class*='col'] {
     float: left;
     padding: 10px;
-    border: 1px solid rgb(177, 140, 232);
+    /* border: 1px solid rgb(177, 140, 232); */
 }
 
 /* div {
@@ -136,7 +138,15 @@ p {
     margin-left: -10px;
     margin-right: -10px;
 }
-
+.btn11 {
+    display: inline-block;
+    color: #fff;
+    background-color: var(--primaryColor);
+    padding: 8px 20px;
+    text-decoration: none;
+    /* border: 3px solid rgba(249, 198, 180, 0.7); */
+    width: 90px;
+}
 .btn1 {
     display: inline-block;
     color: #fff;
@@ -320,6 +330,7 @@ header {
     left: 1px;
 }
 .line3 {
+    top: 15px;
     position: relative;
 }
 .line3:before {
@@ -329,7 +340,7 @@ header {
     position: absolute;
     border-top: 3px solid var(--secondColor);
     width: 60px;
-    top: 90px;
+    top: 20px;
     left: 1px;
 }
 /* events  */
@@ -452,36 +463,41 @@ footer .col-4 a:hover {
     margin: 0;
     padding: 0 0;
 }
-.text1 {
+.col-10 {
     display: flex;
     flex-direction: column;
-    /* margin: 0;
-    padding: 0 0; */
-    padding-top: 0px;
-    padding-bottom: 0px;
+}
+#additional .text3 {
+    /* border: 1px solid #ff6a48; */
+}
+#additional .text2 {
+    flex-direction: row;
+    /* border: 1px solid #f7f5f5; */
+}
+#additional .clock {
+    /* display: block; */
+    float: left;
+    padding: 40px 0px 0px 0px;
+    line-height: 20px;
+    /* border: 1px solid #6b1ef0; */
+}
+#additional .time {
+    padding-top: 40px;
+    color: gray;
+    padding-left: 20px;
+    line-height: 20px;
+    /* border: 1px solid #f8f8f9; */
+}
+#additional .word {
+    display: inline;
+    padding-top: 10px;
+    padding-left: 0px;
+    font-size: 22px;
+    height: 0px;
+    line-height: 15px;
+    /* border: 1px solid #f8f8f9; */
 }
 
-.clock {
-    margin: 0;
-    padding: 0 0;
-    height: 0px;
-}
-.time {
-    margin: 0;
-    /* display: inline; */
-    padding-top: 0px;
-    /* background-color: #e9e9e9; */
-    color: #aaa;
-    height: 20px;
-}
-.word {
-    /* display: inline; */
-    font-size: x-large;
-    margin: 0;
-    padding-top: 0px;
-    /* background-color: #613c3c; */
-    height: 150px;
-}
 #additional .col-7 {
     flex: auto;
     /* background-color: #a982e3; */
@@ -507,27 +523,8 @@ footer .col-4 a:hover {
     font-size: smaller;
 }
 
-/* #additional .col-7 .btn2 {
-    margin-top: 40px;
-    line-height: 35px;
-    background-color: #ff6a48;
-    padding: 15px 0;
-    text-align: center;
-    height: 80px;
-    width: 80px;
-    float: right;
-
-    color: #fff;
-} */
-
-#additional .col-1 {
-    border-bottom: none;
-    border-right: solid 1px #e9e9e9;
-    margin: 40px 0;
-    padding: 40px 0;
-}
 #upcoming {
-    height: 800px;
+    height: 400px;
     line-height: 150px;
     background-image: linear-gradient(rgba(233, 189, 108, 0.6), rgba(255, 96, 96, 0.6)), url(https://source.unsplash.com/random/1200x300);
     background-repeat: no-repeat;
@@ -558,8 +555,6 @@ footer .col-4 a:hover {
 }
 #upcoming h4 {
     font-size: 12px;
-    margin: 0;
-    padding: 0 0;
 }
 
 .date {
@@ -573,18 +568,35 @@ footer .col-4 a:hover {
     width: 80px;
     color: #fff;
 }
-.clock1 {
-    line-height: 15px;
-    padding-top: 20px;
-    padding-bottom: 15px;
-    font-size: 20px;
+#upcoming .col-3 {
+    display: flex;
 }
+.clock1,
 .addr1 {
-    line-height: 15px;
-    padding-top: 20px;
-    padding-bottom: 15px;
-    font-size: 20px;
+    display: block;
+    flex-direction: row;
+    height: 20px;
+    width: 100%;
+    line-height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
 }
+.datetime,
+.address {
+    display: block;
+    flex-direction: column;
+    height: 20px;
+    width: 100%;
+    line-height: 20px;
+    padding-top: 0px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+}
+/* .datetime {
+    padding-top: 10px;
+} */
 #blog {
     height: 700px;
     padding-top: 50px;
@@ -604,16 +616,17 @@ footer .col-4 a:hover {
     text-align: center;
     background-color: #ff6a48;
     position: absolute;
-    bottom: 5px;
+    bottom: 4px;
     left: 0;
 }
 #blog .col-4 {
-    height: 400px;
+    height: 300px;
     width: 400px;
 }
-#blog h1 {
-    padding-top: 0px;
-    padding-bottom: 10px;
+#blog h2 {
+    font-size: 18px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 #blog h4 {
     padding-top: 0px;
@@ -621,8 +634,9 @@ footer .col-4 a:hover {
 }
 
 #pastor {
-    height: 800px;
-    line-height: 150px;
+    padding: 10px;
+    height: 580px;
+    line-height: 60px;
     background-image: linear-gradient(rgba(233, 189, 108, 0.6), rgba(255, 96, 96, 0.6)), url(https://source.unsplash.com/random/1200x300);
     background-repeat: no-repeat;
     background-size: cover;
@@ -631,9 +645,17 @@ footer .col-4 a:hover {
     color: #fff;
     padding: 0 10px;
 }
-#pastor h2 {
+#pastor h3 {
+    line-height: 20px;
+    font-size: 18px;
     padding-top: 15px;
     padding-bottom: 15px;
+}
+#pastor h1 {
+    font-size: 36px;
+}
+#pastor .col-height {
+    line-height: 50px;
 }
 #pastor .col-8 .col-2 .btn2 {
     margin: 50px 0px;
@@ -647,6 +669,18 @@ footer .col-4 a:hover {
 }
 #pastor p {
     color: #fff;
+}
+#pastor .by {
+    color: rgb(141, 138, 138);
+    line-height: 50px;
+}
+#pastor .name {
+    color: #ff6a48;
+    line-height: 50px;
+}
+.inlinename {
+    display: flex;
+    flex-direction: row;
 }
 #pastor a {
     border: 3px solid rgb(167, 164, 164);
